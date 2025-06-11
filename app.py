@@ -9,7 +9,7 @@ app = Flask(__name__)
 def get_meal():
     today = datetime.datetime.now()
     ymd = today.strftime("%Y%m%d")
-    url = f"https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7091428&MLSV_YMD={ymd}"
+    url = f"https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=Q10&SD_SCHUL_CODE=8490083&MLSV_YMD={ymd}"
 
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
